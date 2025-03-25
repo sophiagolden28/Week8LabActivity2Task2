@@ -4,92 +4,39 @@
  */
 package com.mycompany.week8labactivity2task2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
  * @author Sound Room
  */
-public class SubtitleSeqFactory implements SubtitleSeq{
+public class SubtitleSeqFactory {
 
     // Return an empty subtitles sequence 
     public static SubtitleSeq getSubtitleSeq() {
-        
-        
+
+        return new SubSeqImplemented();
 
     }
 
     // Load a subtitle sequence from an SRT file. If the file does not exist or // is corrupted (incorrect format), null is returned. 
     public static SubtitleSeq loadSubtitleSeq(String fileName) {
 
-         
-    }
+        File file = new File("newtext.txt");
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    @Override
-    public void addSubtitle(Subtitle st) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        try {
+            Scanner scanner = new Scanner(file);
 
-    @Override
-    public List<Subtitle> getSubtitles() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+            return new SubSeqImplemented();
+            
+        } catch (FileNotFoundException e) {
 
-    @Override
-    public Subtitle getSubtitle(Time time) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+            return null;
+        }
 
-    @Override
-    public List<Subtitle> getSubtitles(Time startTime, Time endTime) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    }asdfasdfasdfsd
 
-    @Override
-    public List<Subtitle> getSubtitles(String str) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void remove(String str) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void replace(String str1, String str2) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void shift(int offset) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void cut(Time startTime, Time endTime) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-        
-        
-        
-        
-        
-    
-        
-        
-    
-        
-    
-}           
+}

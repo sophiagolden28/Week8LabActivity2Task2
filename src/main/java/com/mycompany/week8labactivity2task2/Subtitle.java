@@ -27,5 +27,5 @@ public interface Subtitle {
 
     // Set the subtitle text.  
     void setText(String text);
-    
+        
 }
